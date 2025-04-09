@@ -18,6 +18,40 @@ let TargetClick = document.querySelector("button.logo-button")
 let elementToChange = document.querySelector("div.logoTest");
 let colourString = document.querySelector("div.colourString");
 let fontString = document.querySelector("div.fontString");
+let myImageTarget = document.querySelector("img")
+let myInfo = document.querySelector(".info-box")
+
+//Add a function that changes the DOM 
+//(display style - currently set to none, hence it is hidden)
+
+function showInfo () {
+  document.querySelector(".info-box").style.display = 'block';
+  document.querySelector(".vl").style.display = 'block';
+}
+
+//Once the function has been defined, apply the click event listener to the element 
+//(the function has two parameters: the event listener and the function name to be applied)
+
+myImageTarget.addEventListener('click', showInfo);
+
+
+
+function hideInfo (){
+  document.querySelector(".info-box").style.display = 'none';
+  document.querySelector(".vl").style.display = 'none';
+}
+
+myInfo.addEventListener('click', hideInfo);
+
+/*
+// info tease reveal function
+function showInfoTease(){
+  document.querySelector(".info-tease").style.display = 'block';
+  style.transitionProperty = "width, height";
+}
+
+myImageTarget.addEventListener('mouseover', showInfoTease);
+*/
 
 const setBg = () => {
   const randomColor = Math.floor(Math.random()*16777215).toString(16);

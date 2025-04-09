@@ -189,6 +189,15 @@ a i {
     grid-column-end: 4;
   }
 
+  .Header img:hover {
+   padding: 0;
+   transition: padding 1s;
+   box-shadow: 13px 13px 8px #888888;
+  }
+   
+
+  
+
   @media only screen and (min-width: 250px) and (max-width: 700px) {
     .Header img  {
      width: 200px;
@@ -210,6 +219,52 @@ a i {
       font-size: 1.1rem;
       
    }
+  }
+
+  #info {
+    display: none;
+    background-color: #80363b;
+    color: white;
+    border: solid white 1px;
+    width: 10%;
+    text-align: center;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+  }
+
+  #myPic:hover + #info {
+    display: block;
+  }
+
+  .info-tease p {
+    padding: 0;
+    margin: 2px;
+  }
+
+  .vl {
+    display: none;
+    border-left: 1px solid black;
+  height: 130px;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  top: 55%;
+  left: 54%;
+  rotate: 40deg;
+  }
+
+  .info-box {
+    display: none;
+    margin: auto;
+    padding: 10px;
+    width: 20%;
+    border: double blue;
+    position: absolute;
+    bottom: 20%;
+    right: 48%;
+    background-color: #91b8b5;
+    text-align: center;
   }
 
 
@@ -259,6 +314,7 @@ a i {
   width: auto;
   text-align: center;
   margin: 0px 80px 0px 80px;
+  box-shadow: 13px 13px 8px #888888;
 }
 
 @media only screen and (max-width: 699px) {
