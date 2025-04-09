@@ -437,6 +437,12 @@ form {
   font-weight: 100;
 }
 
+.email {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+}
+
 /* skills page */
 
 .skillscontainer {
