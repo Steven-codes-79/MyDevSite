@@ -1,10 +1,51 @@
 
+console.log('this is a test')
+
+//alert('this is a test')
+
 let TargetClick = document.querySelector("button.logo-button")
 let elementToChange = document.querySelector("div.logoTest");
 let colourString = document.querySelector("div.colourString");
 let fontString = document.querySelector("div.fontString");
 let myImageTarget = document.querySelector("img")
 let myInfo = document.querySelector(".info-box")
+let ballGame = document.querySelector(".ball-game")
+let gameReveal = document.querySelector(".game-reveal-button")
+let ball = document.getElementById("ball");
+
+function showGame () {
+  document.querySelector(".ball-game").style.display = 'block';
+}
+
+gameReveal.addEventListener('click', showGame);
+
+// BALL GAME FUNCTION
+
+//document.getElementById('ball').style.backgroundColor = 'red';
+
+// Keycodes:
+// A: 65
+// D: 68
+// W: 87
+
+window.addEventListener('keydown', move);
+
+function move(e){
+  if (e.code == 'KeyW') {ball.style.bottom = '300px';}
+  else if (e.code == 'KeyD') {ball.style.left = '900px';}
+}
+
+window.addEventListener('keyup', moveBack);
+
+function moveBack(e){
+  if (e.code == 'KeyW') {ball.style.bottom = '0px';}
+  else if (e.code == 'KeyD') {ball.style.left = '10px';}
+}
+
+//document.addEventListener('keyup', down);
+
+
+
 
 //FUNCTION FOR ABOUT PAGE - REVEAL INFO BOX
 //(display style - currently set to none, hence it is hidden)
@@ -76,30 +117,5 @@ function myFunction() {
 
 
 
-// BALL GAME FUNCTION
 
-document.querySelector(".float-ball").style.display = 'none';
 
-//document.getElementById('ball').style.backgroundColor = 'red';
-
-let ball = document.getElementById("ball");
-
-// Write your code below
-function up(){
-  ball.style.bottom = '400px';
-}
-
-function down(){
-  ball.style.bottom = '0px';
-}
-
-function bounce(){
-  ball.style.bottom = '70px';
-  ball.style.bottom = '50px';
-  ball.style.bottom = '58px';
-  ball.style.bottom = '50px';
-}
-
-document.addEventListener('keydown', up);
-document.addEventListener('keyup', down);
-//document.addEventListener('keydown', bounce);

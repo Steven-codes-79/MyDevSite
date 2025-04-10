@@ -42,7 +42,7 @@ a:not(:first-child) {
 
   @media screen and (max-width: 600px) {
     a {
-      padding: ; 8px 5px;
+      padding: 8px 5px;
       margin-left: 10px;
     }
     
@@ -455,7 +455,53 @@ a i {
   padding-bottom: 30px;
   background-color: coral;
   position: relative;
- 
+  display: none;
+}
+
+.game-reveal-button {
+  background-color: #054a31;
+  color: white;
+  padding: 10px;
+  width: 230px;
+  margin: 10px;
+  border: black solid 1px;
+  border-radius: 20px;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 8px 8px 8px rgb(17, 19, 22);
+  transition: all 0.5s;
+}
+
+.game-reveal-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.game-reveal-button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -30px;
+  transition: 0.1s;
+}
+
+.game-reveal-button:hover {
+  border: solid 1px coral;
+  padding-right: 35px;
+}
+
+.game-reveal-button:hover span:after {
+  opacity: 1;
+  right: -10px;
+}
+
+.game-reveal-button:active {
+  background-color: #3e8e41;
+  transform: translateY(4px);
+  transition: all 0.1s;
 }
 
 #ball {
@@ -468,8 +514,9 @@ a i {
   position: absolute;
   bottom: 0px;
   left: 10px;
-  transition-property: bottom;
-  transition-duration: 2s;
+  right: 0px;
+  transition-property: bottom, left;
+  transition-duration: 3s, 5s;
 }
 
 #stump1 {
