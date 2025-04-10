@@ -1,18 +1,3 @@
-//document.querySelector("section.projheader").innerHTML = 'JAVASCRIPT IS WORKING NOW!!!';
-
-/*
-let element = document.querySelector("div.logoTest");
-
-function turnLogoRed(){
-element.style.backgroundColor = 'red';
-element.style.color = 'white';
-element.innerHTML = 'Red Logo';
-}
-
-//Then apply 'onclick' property to the variable we want to target by assigning the function to it.
-
-element.onclick = turnLogoRed;
-*/
 
 let TargetClick = document.querySelector("button.logo-button")
 let elementToChange = document.querySelector("div.logoTest");
@@ -21,7 +6,7 @@ let fontString = document.querySelector("div.fontString");
 let myImageTarget = document.querySelector("img")
 let myInfo = document.querySelector(".info-box")
 
-//Add a function that changes the DOM 
+//FUNCTION FOR ABOUT PAGE - REVEAL INFO BOX
 //(display style - currently set to none, hence it is hidden)
 
 function showInfo () {
@@ -36,6 +21,9 @@ myImageTarget.addEventListener('click', showInfo);
 
 
 
+
+// FUNCTION TO HIDE THE INFO BOX AGAIN
+
 function hideInfo (){
   document.querySelector(".info-box").style.display = 'none';
   document.querySelector(".vl").style.display = 'none';
@@ -43,15 +31,10 @@ function hideInfo (){
 
 myInfo.addEventListener('click', hideInfo);
 
-/*
-// info tease reveal function
-function showInfoTease(){
-  document.querySelector(".info-tease").style.display = 'block';
-  style.transitionProperty = "width, height";
-}
 
-myImageTarget.addEventListener('mouseover', showInfoTease);
-*/
+
+
+// FUNCTION TO CHANGE LOGO MAKER BACKGROUND COLOUR
 
 const setBg = () => {
   const randomColor = Math.floor(Math.random()*16777215).toString(16);
@@ -76,50 +59,10 @@ fontString.innerHTML = "Font: " + fontArr[switchFont];
 TargetClick.addEventListener("click", fontGen);
 fontGen();
 
-// switch case for alternate fonts
-/*
-function newStyle (){
-    //let newColor = '';
-    let newFont = '';
-    let x = Math.floor(Math.random()*7); 
 
-    switch (x){
-      case 0:
-        //newColor = 'red';
-        newFont = 'Times New Roman'; 
-        break;
-      case 1: 
-        //newColor = 'blue';
-        newFont = 'Florence, cursive'; 
-        break;
-      case 2:
-        //newColor = 'yellow';
-        newFont = 'Verdana';
-        break; 
-      case 3:
-        //newColor= 'purple';
-        newFont = 'Courier New';
-        break
-      case 4:
-       // newColor = 'cyan';
-        newFont = 'Georgia'; 
-        break;
-      case 5:
-          //newColor = 'maroon';
-          newFont = 'Palatino';
-          break;
-      case 6: 
-          //newColor = 'lime';
-          newFont = 'Impact';
-          break;
-    }
 
-    //elementToChange.style.backgroundColor = newColor;
-    elementToChange.style.fontFamily = newFont; 
-}
-    
-TargetClick.addEventListener('click', newStyle);
-*/
+// NAVBAR FUNCTION FOR HAMBURGER ICON VIEW
+
 
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 function myFunction() {
@@ -130,3 +73,33 @@ function myFunction() {
     x.className = "navbar";
   }; 
 }
+
+
+
+// BALL GAME FUNCTION
+
+document.querySelector(".float-ball").style.display = 'none';
+
+//document.getElementById('ball').style.backgroundColor = 'red';
+
+let ball = document.getElementById("ball");
+
+// Write your code below
+function up(){
+  ball.style.bottom = '400px';
+}
+
+function down(){
+  ball.style.bottom = '0px';
+}
+
+function bounce(){
+  ball.style.bottom = '70px';
+  ball.style.bottom = '50px';
+  ball.style.bottom = '58px';
+  ball.style.bottom = '50px';
+}
+
+document.addEventListener('keydown', up);
+document.addEventListener('keyup', down);
+//document.addEventListener('keydown', bounce);
