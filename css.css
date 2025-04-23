@@ -187,6 +187,7 @@ a i {
     grid-row-end: 4;
     grid-column-start: 3;
     grid-column-end: 4;
+    transition: padding 1s;
   }
 
   .Header img:hover {
@@ -231,15 +232,31 @@ a i {
     position: absolute;
     top: 85%;
     left: 50%;
+    
+  }
+
+  #info p {
+    font-size: 8px;
+    transition;
   }
 
   #myPic:hover + #info {
     display: block;
   }
 
+  #myPic:hover + #info p {
+    font-size: 16px;
+  }
+
+  .info-tease {
+    width: 30%;
+    transition: width 2s;
+  }
+
   .info-tease p {
     padding: 0;
     margin: 2px;
+    
   }
 
   .vl {
@@ -251,7 +268,7 @@ a i {
   margin-left: -3px;
   top: 55%;
   left: 54%;
-  rotate: 40deg;
+  rotate: 40deg; 
   }
 
   .info-box {
@@ -547,6 +564,22 @@ a i {
   position: absolute;
     bottom: 0;
     left: 800px;
+}
+
+.game-over-box {
+  display: none;
+  background-color: rgb(255, 86, 80);
+  border: solid black 2px;
+  border-radius: 15px;
+  box-shadow: black 10px 10px;
+  position: relative;
+  left: 0px;
+  bottom: 300px;
+  z-index: 6;
+}
+
+.game-over-box p {
+  font-size: 20px;
 }
 
 /* contact page */
