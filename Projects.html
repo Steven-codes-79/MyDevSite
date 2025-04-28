@@ -45,6 +45,7 @@
     <section class="projcontainer">
         <h2>Project 1 - Logo Maker</h2>
         <p>This application will help you choose a logo and colour scheme for your new business.</p>
+        <p>Click the button for a random colour and font selection. The colour and font are noted below the window.</p>
         <!-- This outer div is to allow the logo test box to be controlled by flex without affecting the other elements in the
          "projcontainer section"  -->
        <div class="logo-container">
@@ -53,13 +54,18 @@
             </div>
        </div>
 
-       <div class="colourString">
-        <p></p>
-       </div>
+    <div class="colFont-box">
 
-       <div class="fontString">
-        <p></p>
-       </div>
+            <div class="colourString">
+            <p></p>
+           </div>
+    
+           <div class="fontString">
+            <p></p>
+           </div>
+
+        </div>
+       
 
        <div class="click-container">
         <button class="logo-button">Click</button>
@@ -72,6 +78,10 @@
         <h2>Project 2 - Ball Game</h2>
         <button class="game-reveal-button"><span>Click to reveal the game</span></button>
         <p>Win the game by making the ball jump over the obstacles right to the end.</p>
+        <p>Use the controls 
+            <p>W: up</p>
+            <p>D: right</p> 
+        <p>Be careful as the ball is magnetic and will always return to it's starting point.</p>
         <div class="ball-game">
             <div class="float-ball" id="ball"></div>
             <div id="stump1"></div>
@@ -85,13 +95,77 @@
         </button>
     </section>
 
-    <!-- 
+     
     <section class="projcontainer">
-        <h2>Project 3 - Logo Maker</h2>
-        <p>This is a desciption of the project</p>
-        <div>[Project box]</div>
+        <h2>Project 3 - Send Maggie Home</h2>
+        <p>Click the traffic light button to safely send Maggie across the road into her dog house.</p>
+        <div class="maggie-window">
+           
+            <div class="clouds">
+                <i class="fa-solid fa-cloud fa-6x"></i>
+                <i class="fa-solid fa-cloud fa-4x"></i>
+            </div>
+
+            <div class="sun">
+                <i class="fa-solid fa-sun fa-8x"></i>
+            </div>
+
+            <div class="trees">
+                <i class="fa-solid fa-tree fa-6x"></i>
+                <i class="fa-solid fa-tree fa-4x"></i>
+            </div>
+
+            <div class="traffic-light">
+               
+                    <div class="red">R</div>
+            
+            
+                    <div class="amber">A</div>
+         
+          
+                    <div class="green">G</div>
+         
+            </div>
+
+            <div class="grass1">
+
+            </div>
+            
+            <div class="dog">
+                <i class="fa-solid fa-dog fa-6x"></i>
+            </div>
+            
+            <div class="road">
+                <div class="white-line1"></div>
+                <div class="white-line2"></div>
+                <div class="white-line3"></div>
+            </div>
+
+            <div class="grass2"></div>
+
+            <div class="house">
+                <i class="fa-solid fa-house fa-6x"></i>
+            </div>
+
+            <div class="home-msg">
+                <box><span>Well done!</span>
+                <br>
+                <br>
+                <span>Maggie is Home!</span>
+                </box>
+            </div>
+            
+        </div>
+
+        <button class="traffic-button">
+            <span>Click traffic light</span>
+        </button>
+
+        <button class="reset-button">
+            <span>Click to reset</span>
+        </button>
     </section>
--->
+
 </main>
 
 

@@ -10,6 +10,13 @@ let gameReveal = document.querySelector(".game-reveal-button")
 let ball = document.getElementById("ball");
 let gameOverBox = document.querySelector(".game-over-box")
 
+let redLight = document.querySelector(".red")
+let amberLight = document.querySelector(".amber")
+let greenLight = document.querySelector(".green")
+let trafficButton = document.querySelector(".traffic-button")
+let maggie = document.querySelector(".dog")
+let resetButton = document.querySelector(".reset-button")
+let Home = document.querySelector(".home-msg")
 
 // FUNCTION TO CHANGE LOGO MAKER BACKGROUND COLOUR
 
@@ -71,8 +78,53 @@ const setBg = () => {
   }
   
  
-  function gameOver () {
-    if (ball.style.left ==)
+  function trafficLights () {
+   amberLight.style.color = 'orange';
+   amberLight.style.backgroundColor = 'orange';
+   setTimeout(amberToGreen, 1000);
+   setTimeout(maggieMove, 2000);
+  }
+
+    trafficButton.addEventListener('click', trafficLights);
+
+  function amberToGreen () {
+    amberLight.style.color = 'black';
+    amberLight.style.backgroundColor = 'black';
+    redLight.style.backgroundColor = 'black';
+    redLight.style.color = 'black';
+    greenLight.style.color = 'green';
+    greenLight.style.backgroundColor = 'green';
+  }
+
+  function maggieMove () {
+   maggie.style.left = '90%';
+   setTimeout(maggieDisappear, 3000);
+   setTimeout(resetButtAppear, 4000);
+   setTimeout(textAppears, 3500)
   }
   
-  
+  function maggieDisappear () {
+    maggie.style.display = 'none';
+  }
+
+  function resetButtAppear () {
+    resetButton.style.display = 'block';
+  }
+
+  function textAppears () {
+    Home.style.display = 'block';
+  }
+    
+  function resetMaggie () {
+    maggie.style.display = 'block';
+    maggie.style.left = '15%';
+    amberLight.style.color = 'black';
+    amberLight.style.backgroundColor = 'black';
+    redLight.style.backgroundColor = 'red';
+    redLight.style.color = 'red';
+    greenLight.style.color = 'black';
+    greenLight.style.backgroundColor = 'black';
+    Home.style.display = 'none';
+  }
+
+  resetButton.addEventListener('click', resetMaggie);

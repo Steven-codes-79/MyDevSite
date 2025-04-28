@@ -402,14 +402,23 @@ a i {
  }
 }
 
+.colFont-box {
+  background-color: #003eba7b;
+  border: black solid 2px;
+  border-radius: 10px;
+  margin: auto;
+  width: 20%;
+}
+
 .colourString {
   text-align: center;
-  margin-top: 10px;
+  margin: 10px;
+
 }
 
 .fontString {
   text-align: center;
-  margin-top: 10px;
+  margin: 10px;
 }
 
 .click-container {
@@ -422,7 +431,7 @@ a i {
   border: black solid 2px;
   border-radius: 15px;
   color: white;
-  background-color: #333;
+  background-color: #003eba7b;
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
@@ -582,6 +591,255 @@ a i {
   font-size: 20px;
 }
 
+
+
+/* MAGGIE GAME */
+
+
+
+.maggie-window {
+  margin: auto;
+  width: 80%;
+  height: 500px;
+  padding-bottom: 30px;
+  background-color: skyblue;
+  position: relative;
+  z-index: 0;
+}
+
+.clouds {
+  position: absolute;
+  left: 70px;
+  top: 0;
+  z-index: 1;
+}
+
+.sun {
+  position: absolute;
+  right: 5%;
+  top: 0;
+  color: rgb(255, 230, 0);
+}
+
+.trees {
+  color: #054a31;
+  position: absolute;
+  right: 18%;
+  bottom: 25%;
+  z-index: 3;
+}
+
+.traffic-light {
+  position: absolute;
+  left: 15%;
+  top: 20%;
+  background-color: rgb(53, 53, 53);
+  border: solid black 2px;
+  border-radius: 30%;
+  padding: 2%;
+  z-index: 4;
+}
+
+
+
+.red {
+  
+background-color: red;
+color: red;
+font-size: 3rem;
+border: solid black 1px;
+border-radius: 100px;
+width: 100%;
+}
+
+.amber {
+  
+  color: black;
+ background-color: black;
+ border: solid black 1px;
+ font-size: 3rem;
+border-radius: 100px;
+width: 100%;
+}
+
+.green {
+background-color: black;
+color: black;
+border: solid black 1px;
+font-size: 3rem;
+border-radius: 100px;
+width: 100%;
+}
+
+.dog {
+  display: block;
+  position: absolute;
+  left: 15%;
+  top: 70%;
+  z-index: 10;
+  transition-property: left;
+  transition-duration: 5s;
+}
+
+
+.house {
+  position: absolute;
+  right: 70px;
+  top: 70%;
+}
+
+.road {
+  width: 40%;
+    height: 60%;
+   transform: skew(20deg);
+  background: #444141;
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+  z-index: 1;
+}
+
+.white-line1 {
+  width: 5%;
+  height: 15%;
+  background-color: white;
+  transform: skew(10deg);
+  position: absolute; 
+  bottom: 3%;
+  left: 50%;
+}
+
+.white-line2 {
+  width: 5%;
+  height: 15%;
+  background-color: white;
+  transform: skew(10deg);
+  position: absolute; 
+  bottom: 35%;
+  left: 48%;
+}
+
+.white-line3 {
+  width: 5%;
+  height: 15%;
+  background-color: white;
+  transform: skew(10deg);
+  position: absolute; 
+  bottom: 65%;
+  left: 45%;
+}
+
+.grass1 {
+  background-color: #3e8e41;
+  width: 30%;
+  height: 30%;
+  position: absolute;
+  left: 2.5%;
+  bottom: 0;
+  transform: skew(20deg);
+}
+
+.grass2 {
+  background-color: #3e8e41;
+  width: 30%;
+  height: 30%;
+  position: absolute;
+  right: 2.5%;
+  bottom: 0;
+  transform: skew(20deg);
+}
+
+.traffic-button {
+  background-color: #054a31;
+  color: white;
+  padding: 10px;
+  width: 230px;
+  margin: 10px;
+  border: black solid 1px;
+  border-radius: 20px;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 8px 8px 8px rgb(17, 19, 22);
+  transition: all 0.5s;
+}
+
+.traffic-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.traffic-button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -30px;
+  transition: 0.1s;
+}
+.traffic-button:hover {
+  border: solid 1px coral;
+  padding-right: 35px;
+}
+
+.traffic-button:hover span:after {
+  opacity: 1;
+  right: -10px;
+}
+
+.traffic-button:active {
+  background-color: #3e8e41;
+  transform: translateY(4px);
+  transition: all 0.1s;
+}
+
+.reset-button {
+  background-color: red;
+  display:none;
+  position: relative;
+  left: 50%;
+  color: white;
+  padding: 10px;
+  width: 230px;
+  margin: 10px;
+  border: black solid 1px;
+  border-radius: 20px;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 8px 8px 8px rgb(17, 19, 22);
+  transition: all 0.5s;
+}
+
+.reset-button span:after {
+  content: '\00bb';
+  position: relative;
+  opacity: 0;
+  top: 0;
+  right: -50px;
+  transition: 0.1s;
+}
+
+.reset-button:hover {
+  border: solid 1px coral;
+  padding-right: 35px;
+}
+
+.reset-button:hover span:after {
+  opacity: 1;
+  right: -10px;
+}
+
+.reset-button:active {
+  background-color: #3e8e41;
+  transform: translateY(2px);
+  transition: all 0.1s;
+}
+
+.home-msg {
+  font-size: 3rem;
+  display: none;
+}
 /* contact page */
 
 .contactcontainer {
